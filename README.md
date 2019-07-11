@@ -3,6 +3,9 @@
 This is my first attempt at an API builded throught RUBY using Sinatra and Mongoid. </br>
 The API is ready for heroku deployment through docker. 
 
+## About 
+The API 
+
 ## SETUP to Heroku 
 You'll have to have installed: 
 * [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
@@ -32,10 +35,33 @@ Push your docker container to heroku to the app you just made
 ```
 $ heroku container:push web --app <your-app> 
 ```
-Release and it's good to go
+Release you're almost good to go
 ```
 $ heroku container:release web --app <your-app> 
 ```
+
+Last get an online MongoDB, and paste the URI as an environment variables in heruko. </br>
+<your-app> -> settings -> reveal config vars </br>
+key = CLUSTER_0_PSW
+value = <your-URI>
+
+## How to use the API through javascript
+The API is made to GET, POST, PATCH and DELETE firms in a MongoDB. </br>
+The firms model is like: 
+```json 
+[
+  {
+    name: STRING
+    address: STRING
+    city: STRING
+    country: STRING
+    email: STRING
+    phone: STRING
+  }
+]
+```
+
+You have 4 ways to use the api
 
 * GET
 * POST
@@ -43,7 +69,7 @@ $ heroku container:release web --app <your-app>
 * DELETE
 
 ### GET
-Hey
+Here you get all the firms in  
 
 ### POST
 hey
