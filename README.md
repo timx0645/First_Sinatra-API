@@ -93,7 +93,7 @@ Here you add a new Business to your MongoDB:
 ### PATCH
 Here you can update an existing Business in your MongoDB
 ```javascript 
-  fetch(`${your-herokuapp-url}/api/firma`, {
+  fetch(`${your-herokuapp-url}/api/firma/<Business-ID>`, {
           method: 'PATCH',
           headers: {
               'Accept': 'application/json',
