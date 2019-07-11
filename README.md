@@ -60,16 +60,17 @@ The firms model is like:
   }
 ]
 ```
-
-You have 4 ways to use the api
-
-* GET
-* POST
-* PATCH
-* DELETE
-
 ### GET
-Here you get all the firms in  
+Here you get all the firms in your MongoDB:
+```javascript 
+  fetch(`${your-heroku-url}/api/firma`)
+          .then(response => response.json())
+          .then(data => 
+          
+          Do something with your data
+          
+          )
+```
 
 ### POST
 hey
