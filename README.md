@@ -1,7 +1,6 @@
 # First Sinatra API
 
-This is my first attempt at an API builded throught RUBY. 
----
+#### This is my first attempt at an API builded throught RUBY. 
 This API have 4 standard functions. 
 
 * GET
