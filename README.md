@@ -51,12 +51,12 @@ The firms model is like:
 ```json 
 [
   {
-    name: STRING
-    address: STRING
-    city: STRING
-    country: STRING
-    email: STRING
-    phone: STRING
+    "name": "String value",
+    "address": "String value",
+    "city": "String value",
+    "country": "String value",
+    "email": "String value",
+    "phone": "String value"
   }
 ]
 ```
