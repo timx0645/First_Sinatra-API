@@ -66,9 +66,7 @@ Here you get all the firms in your MongoDB:
   fetch(`${your-heroku-url}/api/firma`)
           .then(response => response.json())
           .then(data => 
-          
-          Do something with your data
-          
+          //Do something with your data
           )
 ```
 
