@@ -46,8 +46,8 @@ key = CLUSTER_0_PSW
 value = <your-URI>
 
 ## How to use the API through javascript
-The API is made to GET, POST, PATCH and DELETE firms in a MongoDB. </br>
-The firms model is like: 
+The API is made to GET, POST, PATCH and DELETE Businesses in a MongoDB. </br>
+The Business model is like: 
 ```json 
 [
   {
@@ -61,9 +61,9 @@ The firms model is like:
 ]
 ```
 ### GET
-Here you get all the firms in your MongoDB:
+Here you get all the Businesses in your MongoDB:
 ```javascript 
-  fetch(`${your-heroku-url}/api/firma`)
+  fetch(`${your-herokuapp-url}/api/firma`)
           .then(response => response.json())
           .then(data => 
           //Do something with your data
@@ -71,10 +71,52 @@ Here you get all the firms in your MongoDB:
 ```
 
 ### POST
-hey
+Here you add a new Business to your MongoDB:
+```javascript 
+  fetch(`${your-herokuapp-url}/api/firma`, {
+          method: 'POST',
+          headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+             name: "String value",
+             address: "String value",
+             city: "String value",
+             country: "String value",
+             email: "String value",
+             phone: "String value"
+          })        
+        })
+```
 
 ### PATCH
-hey
+Here you can update an existing Business in your MongoDB
+```javascript 
+  fetch(`${your-herokuapp-url}/api/firma`, {
+          method: 'PATCH',
+          headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+             name: "String value",
+             address: "String value",
+             city: "String value",
+             country: "String value",
+             email: "String value",
+             phone: "String value"
+          })        
+        })
+```
 
 ### DELETE
-hey 
+Here you delete a Business in your MongoDB:
+```javascript 
+  fetch(`${your-herokuapp-url}/api/firma/<Business-ID>`, {
+            method: 'DELETE',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            }})
+```
