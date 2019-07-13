@@ -19,6 +19,10 @@ $ heroku login
 ```
 $ docker login 
 ```
+Now we setup a docker container to release to heroku
+```
+$ docker-compose up  
+```
 Now get heroku docker plugin
 ```
 $ heroku plugins:install heroku-docker  
