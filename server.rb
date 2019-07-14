@@ -62,10 +62,13 @@ get '/' do
 end
 
 #Namespace så jeg bedre kan styre mine api kald
-namespace '/api' do
+namespace '/v1/api' do
 
   before do
-    content_type 'application/json'
+    content_type :json    
+    headers 'Access-Control-Allow-Origin' => '*', 
+            'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST',  'DELETE', 'PATCH'],
+            'Access-Control-Allow-Headers' => 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With'
   end
   
   #Helper som er med til, at give et tilbage kald, når der bliver kaldt på api'en
@@ -134,4 +137,10 @@ namespace '/api' do
     status 204
   end
 
+  options "*" do
+    response.headers["Allow"] = "GET, PUT, POST, DELETE, OPTIONS, PATCH"
+    response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type, Accept, X-User-Email, X-Auth-Token"
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    200
+  end
 end
